@@ -1,0 +1,42 @@
+page-detalle {
+    ion-header{
+        height: 30vh;
+        background-image: url('../../assets/imgs/vami.jpg');
+        background-position: center;
+        background-size: cover;
+        .bg-header{
+            width: 100%;
+            height: 100%;            
+            background-image: radial-gradient(ellipse   , #00FFFF 0%, rgba(255, 255, 255, 0) 0%, #000000 120%);
+            h1{
+                margin-bottom: -1rem;
+            }
+            p{
+                font-size: 1.2em;
+            }
+            .navbar {
+                // text-shadow: 1px 1px 4px black
+                color: #ffffff;
+            
+            }
+            .titulo-detalle {
+                // text-shadow: 1px 1px 4px black
+                color: #ffffff;
+                padding: 3rem;
+                padding-top: 2rem;
+            
+            }            
+        }
+
+    }
+    ion-content{
+        ion-list{
+            ion-item{
+                p{
+                    white-space: pre-line;
+                }
+            }
+        }
+    }
+
+}

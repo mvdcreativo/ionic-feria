@@ -1,3 +1,5 @@
+import { DetallePageModule } from './../pages/detalle/detalle.module';
+import { PopoverComponent } from './../components/popover/popover';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -10,6 +12,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { GoogleMaps } from '@ionic-native/google-maps'
+import { Geolocation } from '@ionic-native/geolocation'
+import { ServicesStandsProvider } from '../providers/services-stands/services-stands';
 
 @NgModule({
   declarations: [
@@ -17,10 +22,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,
+    DetallePageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -29,12 +36,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PopoverComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    GoogleMaps,
+    Geolocation,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ServicesStandsProvider
   ]
 })
 export class AppModule {}
