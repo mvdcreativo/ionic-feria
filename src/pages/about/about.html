@@ -8,13 +8,13 @@
 
 <ion-content>
   <ion-list >
-    <ion-item *ngFor="let stand of stands" >
-      <ion-avatar slot="start">
-        <ion-img [src]="stand.img"></ion-img>
-      </ion-avatar>
+    <ion-item *ngFor="let stand of stands" (click)="goDetalle(stand.id)" >
+      <ion-thumbnail item-start> 
+        <img [src]="stand.logo">
+      </ion-thumbnail>
       <ion-label>
         <h2>{{ stand.nombre }}</h2>
-        <h3>I'm a big deal</h3>
+        <h3>{{ stand.categoria }}</h3>
         <p>{{ stand.descripcion }}</p>
       </ion-label>
     </ion-item>

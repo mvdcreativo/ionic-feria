@@ -42,14 +42,24 @@ $colors: (
   transparent: transparent,
 );
 
-
+$header-bg-color: #33691e;
 $toolbar-background: transparent;
+$tabs-color:#33691e;
+$tabs-active:#035e61;
+
+
+
+
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$tabs-ios-tab-icon-color: $tabs-color;
+$tabs-ios-tab-text-color: $tabs-color;
+$tabs-ios-tab-icon-color-active: $tabs-active;
+$tabs-ios-tab-text-color-active: $tabs-active;
 
 
 
@@ -57,7 +67,10 @@ $toolbar-background: transparent;
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$tabs-md-tab-icon-color: $tabs-color;
+$tabs-md-tab-text-color: $tabs-color;
+$tabs-md-tab-icon-color-active: $tabs-active;
+$tabs-md-tab-text-color-active: $tabs-active;
 
 
 // App Windows Variables

@@ -1,9 +1,22 @@
 page-about {
     ion-header{
         color: black;
-        background: black;
+        background: $header-bg-color;
         ion-navbar{
             color: black;
+        }
+    }
+    ion-content{
+
+        ion-list{
+            ion-item{
+                ion-thumbnail{
+                    img{
+                        border-radius: 5px;
+                        border: solid 1px lightgrey;
+                    }
+                }
+            }
         }
     }
 }

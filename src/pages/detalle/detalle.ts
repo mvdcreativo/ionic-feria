@@ -38,7 +38,6 @@ export class DetallePage {
   detalleStand(idParams){
     let id = idParams.data.id;
     this.stands = this.serviceStands.getStandsId(id);
-   console.log(this.stands)
   }
     
 }

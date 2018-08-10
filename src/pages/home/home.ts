@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, PopoverController, Alert } from 'ionic-angular';
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapOptions, BaseArrayClass, MarkerOptions, LatLng, HtmlInfoWindow } from '@ionic-native/google-maps';
+import { GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapOptions, MarkerOptions, LatLng } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ServicesStandsProvider } from './../../providers/services-stands/services-stands';
 import { DetallePage } from '../detalle/detalle';
@@ -66,7 +66,13 @@ export class HomePage {
       position: new LatLng(options.coordenadas.lat, options.coordenadas.lng),
       title: options.nombre,
       animation: 'DROP',
-      icon: options.icono,
+      icon: {
+            url: options.icono,
+            size: {
+              width: 32,
+              height: 34
+            }
+      }
     };
 
     let marker = this.map.addMarkerSync(markerOptions);

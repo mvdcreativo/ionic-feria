@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { ContactPage } from './../contact/contact';
+import { DetallePage } from '../detalle/detalle';
 
 @Component({
   selector: 'page-about',
@@ -27,5 +28,8 @@ listStands(){
   this.stands = this.serviceStands.stands
 }
 
+goDetalle(id){
+  this.navCtrl.push(DetallePage, {'id':id});
+}
 
 }

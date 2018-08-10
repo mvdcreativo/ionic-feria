@@ -13,7 +13,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleMaps } from '@ionic-native/google-maps'
-import { Geolocation } from '@ionic-native/geolocation'
 import { ServicesStandsProvider } from '../providers/services-stands/services-stands';
 
 @NgModule({
@@ -43,7 +42,7 @@ import { ServicesStandsProvider } from '../providers/services-stands/services-st
     StatusBar,
     SplashScreen,
     GoogleMaps,
-    Geolocation,
+    StatusBar,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ServicesStandsProvider
   ]
